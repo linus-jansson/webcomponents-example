@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcomponent example</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="buttons" class="buttons">
+            <nti-button data-name="Knapp 1">Det här är en NTI knapp 1</nti-button>
+            <nti-button data-name="Knapp 2">Det här är en NTI knapp 2</nti-button>
+            <nti-button data-name="Knapp 3">Det här är en NTI knapp 3</nti-button>
+            <nti-button data-name="Knapp 4">Det här är en NTI knapp 4</nti-button>
+            <nti-button data-name="Knapp 5">Det här är en NTI knapp 5</nti-button>
+            <nti-button data-name="Knapp 6">Det här är en NTI knapp 6</nti-button>
+        </div>
+        <div id="value" class="value-div">
+            Ingen knapp är klickad
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+<script>
+    const valueDiv = document.querySelector('#value');
+    document.querySelectorAll('nti-button').forEach((custombutton) => {
+        custombutton.addEventListener('click', () => {
+            valueDiv.textContent = custombutton.dataset.name + " klickad";
+        })
+    })
+</script>
+</html>

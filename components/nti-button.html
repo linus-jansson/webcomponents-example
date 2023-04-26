@@ -1,40 +1,52 @@
-<template id="nti-button">
-    <style>
-        .custom-button {
-            font-family: Helvetica;
-            font-size: 19px;
-            font-weight: bold;
-            box-shadow: 0 2px 10px 0 rgba(0,0,0,.33);
-            border-radius: 7px;
-            text-transform: uppercase;
-            padding: 21px 54px;
-            color: #fff;
-            background-image: 
-                linear-gradient(
-                    -90deg,
-                    #dd0890 0,
-                    #200c9c 30%,
-                    #4a0082 70%,
-                    #dd0890 100%
-                );
-            cursor: pointer;
-            background-size: 300% 100%;
-            transition: all .4s ease-in-out;
-            border: 0;
-        }
-        .custom-button:hover{
-            background-position: 100% 0;
-            -webkit-transition: all .4s ease-in-out;
-            -o-transition: all .4s ease-in-out;
-            transition: all .4s ease-in-out;
-        }
-    </style>
-    <script>
-        console.log("Detta är en webkomponent")
-    </script>
-    <button class="custom-button">
-        <slot>
-            Det här borde inte synnas
-        </slot>
-    </button>
-</template>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template id="nti-button">
+        <style>
+            .custom-button {
+                font-family: Helvetica;
+                font-size: 19px;
+                font-weight: bold;
+                box-shadow: 0 2px 10px 0 rgba(0,0,0,.33);
+                border-radius: 7px;
+                text-transform: uppercase;
+                padding: 21px 54px;
+                color: #fff;
+                background-image: 
+                    linear-gradient(
+                        -90deg,
+                        #dd0890 0,
+                        #200c9c 30%,
+                        #4a0082 70%,
+                        #dd0890 100%
+                    );
+                cursor: pointer;
+                background-size: 300% 100%;
+                transition: all .4s ease-in-out;
+                border: 0;
+            }
+            .custom-button:hover{
+                background-position: 100% 0;
+                -webkit-transition: all .4s ease-in-out;
+                -o-transition: all .4s ease-in-out;
+                transition: all .4s ease-in-out;
+            }
+        </style>
+    
+        <button class="custom-button">
+            <slot>
+                Det här borde inte synnas
+            </slot>
+        </button>
+        <script>
+            console.log("Detta är en webkomponent")
+        </script>
+    </template>
+</body>
+</html>

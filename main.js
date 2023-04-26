@@ -16,7 +16,9 @@ class NTIButton extends HTMLElement {
         getTemplate("components/nti-button.html")
         .then((template) => {
             const content = template.content;
+            // Öppna shadow DOM
             const shadowRoot = this.attachShadow({mode: 'open'});
+            // Kopiera innehållet från template till shadow DOM
             shadowRoot.appendChild(content.cloneNode(true));
         });
     }

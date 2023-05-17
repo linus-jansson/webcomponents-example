@@ -16,3 +16,8 @@
     font-size: 125px;
     font-weight: bold;
 }
+
+/* Kommer inte overrida min webbkomponent */
+button {
+    min-width: 200px !important;
+}

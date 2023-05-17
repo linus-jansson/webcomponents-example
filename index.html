@@ -11,24 +11,24 @@
 <body>
     <div class="container">
         <div id="buttons" class="buttons">
-            <nti-button data-name="Knapp 1">Det här är en NTI knapp 1</nti-button>
-            <nti-button data-name="Knapp 2">Det här är en NTI knapp 2</nti-button>
-            <nti-button data-name="Knapp 3">Det här är en NTI knapp 3</nti-button>
-            <nti-button data-name="Knapp 4">Det här är en NTI knapp 4</nti-button>
-            <nti-button data-name="Knapp 5">Det här är en NTI knapp 5</nti-button>
-            <nti-button data-name="Knapp 6">Det här är en NTI knapp 6</nti-button>
+            <nti-button>Det här är en NTI knapp 1</nti-button>
+            <nti-button>Det här är en NTI knapp 2</nti-button>
+            <nti-button>Det här är en NTI knapp 2</nti-button>
         </div>
-        <div id="value" class="value-div">
+        <div id="value" class="value-div" data-clicked="0">
             Ingen knapp är klickad
         </div>
     </div>
 </body>
 <script src="./main.js"></script>
 <script>
-    const valueDiv = document.querySelector('#value');
+    
     document.querySelectorAll('nti-button').forEach((custombutton) => {
         custombutton.addEventListener('click', () => {
-            valueDiv.textContent = custombutton.dataset.name + " klickad";
+            const valueDiv = document.querySelector('#value');
+            const amountClicked = valueDiv.dataset.clicked;
+            valueDiv.dataset.clicked = parseInt(amountClicked) + 1;
+            valueDiv.textContent = 'Knapparna klickad ' + (parseInt(amountClicked) + 1) + ' gånger';
         })
     })
 </script>

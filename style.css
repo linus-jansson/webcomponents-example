@@ -35,5 +35,5 @@
 
 /* Kommer inte overrida min webbkomponent */
 button {
-    min-width: 200px !important;
+    min-width: 20000px !important;
 }
